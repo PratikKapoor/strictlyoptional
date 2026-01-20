@@ -1,0 +1,47 @@
+# -- Theme Parameters --
+colorScheme = "blowfish"
+defaultAppearance = "dark"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = true
+
+[header]
+  layout = "basic"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 5
+  showMoreLink = true
+  showMoreLinkDest = "/posts/"
+
+[article]
+  showDate = true
+  showDateUpdated = true
+  showAuthor = true
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showHeadingAnchors = true
+  showPagination = true
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true
+  showWordCount = false
+  sharingLinks = ["twitter", "linkedin", "reddit"]
+
+[list]
+  showBreadcrumbs = true
+  showSummary = true
+  groupByYear = true
+  showCards = true
+
+[taxonomy]
+  showTermCount = true

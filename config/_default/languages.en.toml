@@ -1,0 +1,17 @@
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  weight = 1
+  # rtl = false
+
+[params.author]
+  name = "Pratik Kapoor"
+  # image = "img/author.jpg"
+  # headline = "Your headline here"
+  # bio = "A little bit about you"
+  links = [
+    { github = "https://github.com/PratikKapoor" },
+  ]
+
+title = "strictlyoptional"
+description = "Tech explorations, hardware tuning, and engineering deep-dives"
