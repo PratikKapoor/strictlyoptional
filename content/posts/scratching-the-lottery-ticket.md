@@ -50,6 +50,27 @@ This is the silicon lottery at scale: not just "how good is my chip," but "what 
 
 So how do you actually measure your chip's quality? You can't just look at benchmark scores—a "good" score might be hiding inefficiencies, and a "bad" score might be thermal throttling, not silicon limits.
 
+### This Works for Any GPU
+
+The methodology below applies to virtually any modern graphics card—not just the RTX 4090. The specific numbers change, but the process is identical:
+
+| What Changes | NVIDIA | AMD |
+|--------------|--------|-----|
+| Tuning tool | MSI Afterburner | MSI Afterburner or Radeon Software |
+| Typical voltage range | 850-1100mV | 900-1150mV |
+| Clock targets | Varies by GPU tier | Varies by GPU tier |
+| Memory OC headroom | Usually +500 to +1500 MHz | Usually +50 to +150 MHz (GDDR6) |
+
+**What stays the same:**
+- Establish a stock baseline first
+- Track effective clocks, not just reported clocks
+- Calculate clock stretch to find hidden inefficiencies  
+- Test in phases: memory → voltage → combined
+- Stress test for stability, not just benchmarks
+- Your optimal settings will be unique to your chip
+
+Whether you have a GTX 1660, RX 7800 XT, or RTX 4090, the silicon lottery affects you. The only way to know where your chip stands is to test it.
+
 Here's the methodology I used to evaluate my PNY RTX 4090:
 
 ### Why PNY Verto?
