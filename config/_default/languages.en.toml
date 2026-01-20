@@ -11,6 +11,7 @@
   # bio = "A little bit about you"
   links = [
     { github = "https://github.com/PratikKapoor" },
+    { linkedin = "https://www.linkedin.com/in/kapoor-pratik/" },
   ]
 
 title = "strictlyoptional"
