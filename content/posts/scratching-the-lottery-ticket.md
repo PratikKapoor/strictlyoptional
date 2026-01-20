@@ -1,7 +1,7 @@
 +++
 date = '2026-01-19T20:45:59-08:00'
 draft = false
-title = 'The Silicon Lottery: Why Your GPU Is One of a Kind'
+title = 'Scratching the Lottery Ticket'
 description = 'Every graphics card is unique—not in a motivational poster way, but in a physics way. I documented my RTX 4090 undervolt journey to find out where my chip stands.'
 tags = ['hardware', 'gpu', 'nvidia', 'undervolting', 'overclocking']
 +++
