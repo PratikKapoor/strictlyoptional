@@ -2,7 +2,8 @@
 date = '2026-01-19T20:45:59-08:00'
 draft = false
 title = 'Scratching the Lottery Ticket'
-description = 'Every graphics card is unique—not in a motivational poster way, but in a physics way. I documented my RTX 4090 undervolt journey to find out where my chip stands.'
+description = 'Every graphics card is unique, not in a motivational poster way, but in a physics way. I documented my RTX 4090 undervolt journey to find out where my chip stands.'
+summary = 'Every graphics card is unique, not in a motivational poster way, but in a physics way. I documented my RTX 4090 undervolt journey to find out where my chip stands.'
 tags = ['hardware', 'gpu', 'nvidia', 'undervolting', 'overclocking']
 +++
 
@@ -18,7 +19,7 @@ They don't all work. Not perfectly, anyway.
 
 ## The Lottery
 
-As transistors shrink, quantum effects creep in. Electrons tunnel through barriers they shouldn't. Tiny variations in the manufacturing process—a few atoms here, a slight temperature fluctuation there—create chips that are electrically unique.
+As transistors shrink, quantum effects creep in. Electrons tunnel through barriers they shouldn't. Tiny variations in the manufacturing process, a few atoms here, a slight temperature fluctuation there, create chips that are electrically unique.
 
 Some chips conduct efficiently at low voltages. Others need more juice to stay stable. Some run hot. Some boost higher. **Same assembly line, same design, different results.**
 
@@ -40,7 +41,7 @@ But what happens when an AD102 comes off the line with defects in some of its 14
 
 No. NVIDIA disables the broken sections and sells it as something else.
 
-In 2024, people started finding RTX 4070 Ti Supers with *AD102 dies inside*—the same 76-billion-transistor chip from the RTX 4090, but with **54% of its cores disabled**. These "failed" 4090 chips got a second life as mid-range cards. Similarly, RTX 4070s have been spotted with AD103 silicon (the 4080's chip), running with 43% of its cores turned off.
+In 2024, people started finding RTX 4070 Ti Supers with *AD102 dies inside*, the same 76-billion-transistor chip from the RTX 4090, but with **54% of its cores disabled**. These "failed" 4090 chips got a second life as mid-range cards. Similarly, RTX 4070s have been spotted with AD103 silicon (the 4080's chip), running with 43% of its cores turned off.
 
 Your RTX 4070 might literally contain a 4080 chip that didn't make the cut. Your 4070 Ti Super might be a lobotomized 4090. You'd never know without checking GPU-Z.
 
@@ -48,11 +49,11 @@ This is the silicon lottery at scale: not just "how good is my chip," but "what 
 
 ## How to Find Out Where You Stand
 
-So how do you actually measure your chip's quality? You can't just look at benchmark scores—a "good" score might be hiding inefficiencies, and a "bad" score might be thermal throttling, not silicon limits.
+So how do you actually measure your chip's quality? You can't just look at benchmark scores. A "good" score might be hiding inefficiencies, and a "bad" score might be thermal throttling, not silicon limits.
 
 ### This Works for Any GPU
 
-The methodology below applies to virtually any modern graphics card—not just the RTX 4090. The specific numbers change, but the process is identical:
+The methodology below applies to virtually any modern graphics card, not just the RTX 4090. The specific numbers change, but the process is identical:
 
 | What Changes | NVIDIA | AMD |
 |--------------|--------|-----|
@@ -75,7 +76,7 @@ Here's the methodology I used to evaluate my PNY RTX 4090:
 
 ### Why PNY Verto?
 
-When I started researching undervolt settings for my card, I found plenty of results for ASUS, MSI, Gigabyte—but almost nothing for the PNY Verto edition. It's one of the more affordable 4090s, which means plenty of people own one, yet the community knowledge just isn't there.
+When I started researching undervolt settings for my card, I found plenty of results for ASUS, MSI, Gigabyte, but almost nothing for the PNY Verto edition. It's one of the more affordable 4090s, which means plenty of people own one, yet the community knowledge just isn't there.
 
 So I documented everything. If you've got a PNY Verto 4090 and wondered how it stacks up in the silicon lottery, this is for you.
 
@@ -84,10 +85,10 @@ So I documented everything. If you've got a PNY Verto 4090 and wondered how it s
 Run your card completely stock. No overclocks, no undervolts. Use a consistent, repeatable benchmark (I used 3DMark Steel Nomad) and log sensor data with HWiNFO64.
 
 Key metrics to capture:
-- **GPU Clock** (reported) — what the card claims it's running
-- **GPU Effective Clock** — what it's *actually* running
-- **Power draw** — at high load (>90% GPU utilization)
-- **Temperatures** — edge and hotspot
+- **GPU Clock** (reported) - what the card claims it's running
+- **GPU Effective Clock** - what it's *actually* running
+- **Power draw** - at high load (>90% GPU utilization)
+- **Temperatures** - edge and hotspot
 
 ### Step 2: Calculate Clock Stretch
 
@@ -107,10 +108,10 @@ I ran 15+ configurations across three categories: memory overclocks, core underv
 
 | Config | 3DMark Score | vs Stock | Power | Notes |
 |--------|--------------|----------|-------|-------|
-| Stock | 8816 | — | 434W | Baseline |
+| Stock | 8816 | - | 434W | Baseline |
 | +1000 MHz mem | 8965 | +1.7% | ~400W | Stable |
 | +1500 MHz mem | **9105** | **+3.3%** | ~400W | **Best score** |
-| +1750 MHz mem | 9056 | +2.7% | ~400W | Regression — memory errors |
+| +1750 MHz mem | 9056 | +2.7% | ~400W | Regression - memory errors |
 
 **Finding:** Memory OC sweet spot is +1500 MHz. Going higher causes error correction that tanks performance.
 
@@ -120,7 +121,7 @@ I ran 15+ configurations across three categories: memory overclocks, core underv
 |--------|--------------|----------|-------|-------|
 | 1000mV @ 2850 MHz | 8555 | -3.0% | ~390W | Too aggressive |
 | 975mV @ 2800 MHz | 8748 | -0.8% | ~370W | Stable but slower |
-| 950mV @ 2750 MHz | — | — | — | Crashed |
+| 950mV @ 2750 MHz | - | - | - | Crashed |
 | 950mV @ 2730 MHz | 8699 | -1.3% | ~355W | Stable |
 | 925mV @ 2700 MHz | 8593 | -2.5% | ~340W | Max efficiency |
 
@@ -142,8 +143,8 @@ Quick benchmarks lie. A config might score well once but crash under sustained l
 
 | Config | Stability % | Loops | Result |
 |--------|-------------|-------|--------|
-| 950mV/2750 MHz + 1500 mem | — | 8/20 | ❌ Crashed |
-| 950mV/2750 MHz + 1750 mem | — | 12/20 | ❌ Crashed |
+| 950mV/2750 MHz + 1500 mem | - | 8/20 | ❌ Crashed |
+| 950mV/2750 MHz + 1750 mem | - | 12/20 | ❌ Crashed |
 | **950mV/2730 MHz + 1500 mem** | **98.9%** | **20/20** | ✅ **Passed** |
 
 ### Step 5: Analyze the Winner
@@ -164,9 +165,9 @@ The undervolted config runs **higher effective clocks** on **40 fewer watts** wi
 
 ### What This Tells Me
 
-My card isn't a lottery winner. Stock boost clocks (~2550 MHz reported) are below average for a 4090—most hit 2700-2800+. The 2.87% clock stretch confirms it: stock, this chip is power-limited and struggling.
+My card isn't a lottery winner. Stock boost clocks (~2550 MHz reported) are below average for a 4090, most hit 2700-2800+. The 2.87% clock stretch confirms it: stock, this chip is power-limited and struggling.
 
-But it responds well to undervolting. At 950mV, it stops fighting itself and runs clean. The silicon isn't bad—NVIDIA's default voltage curve just isn't optimized for *this specific chip*.
+But it responds well to undervolting. At 950mV, it stops fighting itself and runs clean. The silicon isn't bad, NVIDIA's default voltage curve just isn't optimized for *this specific chip*.
 
 **My lottery standing: ~45th percentile.** Below average stock performance, but recoverable with tuning.
 
@@ -187,7 +188,7 @@ Not the highest-scoring config (that's stock voltage +1500 mem at 9105), but the
 
 Remember the RTX 4090 melting connector fiasco? The 16-pin 12VHPWR connector (12 power pins + 4 sense pins) pushing 450W+ caused fires when connectors weren't fully seated or wires fatigued over time. NVIDIA and connector manufacturers took the blame, but physics was the real culprit: that much power through such a compact connector leaves zero margin for error.
 
-Undervolting helps. My config pulls ~394W instead of ~434W—that's 40W less current stressing those pins. It won't save a badly seated connector, but it reduces thermal stress on a component that's already operating near its limits.
+Undervolting helps. My config pulls ~394W instead of ~434W, that's 40W less current stressing those pins. It won't save a badly seated connector, but it reduces thermal stress on a component that's already operating near its limits.
 
 One more reason to tune your card: **longevity**. Less power, less heat, less stress on the weakest link in the system.
 
@@ -195,7 +196,7 @@ One more reason to tune your card: **longevity**. Less power, less heat, less st
 
 Here's what fascinates me: right now, in your PC, there's a chip with characteristics no one has fully mapped. Your specific GPU has a voltage/frequency curve that's never been perfectly optimized. It has thermal behaviors unique to its particular arrangement of imperfect transistors.
 
-When you undervolt and overclock, you're not following a guide—you're running experiments on a one-of-a-kind piece of physics. The "stable" settings you find are *yours*. No one else's card will behave exactly the same way.
+When you undervolt and overclock, you're not following a guide, you're running experiments on a one-of-a-kind piece of physics. The "stable" settings you find are *yours*. No one else's card will behave exactly the same way.
 
 Some people have golden samples that hit 2900+ MHz at 950mV. Some have duds that crash at stock. Most of us are somewhere in between, with chips that have quirks waiting to be discovered.
 
@@ -203,7 +204,7 @@ Some people have golden samples that hit 2900+ MHz at 950mV. Some have duds that
 
 We've gotten so used to GPUs that we forget what they are: billions of molecular-scale switches, built from refined sand, that simulate entire worlds in real-time. The fact that they work at all is absurd. The fact that they're all slightly different is inevitable.
 
-The silicon lottery isn't a flaw in manufacturing. It's a reminder that we're working at the edge of what's physically possible—where quantum mechanics meets engineering, and perfection is impossible.
+The silicon lottery isn't a flaw in manufacturing. It's a reminder that we're working at the edge of what's physically possible, where quantum mechanics meets engineering, and perfection is impossible.
 
 ---
 
