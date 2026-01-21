@@ -1,10 +1,11 @@
-# -- Theme Parameters --
 colorScheme = "blowfish"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
+disableTextInHeader = true
+highlightCurrentMenuArea = true
 
 [header]
   layout = "basic"
@@ -17,7 +18,7 @@ enableCodeCopy = true
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
+  layout = "page"
   showRecent = true
   showRecentItems = 5
   showMoreLink = true

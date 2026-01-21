@@ -8,3 +8,14 @@
   name = "Tags"
   pageRef = "tags"
   weight = 20
+
+# -- Footer Menu --
+[[footer]]
+  pre = "github"
+  url = "https://github.com/PratikKapoor"
+  weight = 10
+
+[[footer]]
+  pre = "linkedin"
+  url = "https://www.linkedin.com/in/kapoor-pratik/"
+  weight = 20

@@ -2,17 +2,11 @@
   displayName = "EN"
   isoCode = "en"
   weight = 1
-  # rtl = false
+  logo = "img/logo.png"
+  copyright = "© { year } Pratik Kapoor"
 
 [params.author]
   name = "Pratik Kapoor"
-  # image = "img/author.jpg"
-  # headline = "Your headline here"
-  # bio = "A little bit about you"
-  links = [
-    { github = "https://github.com/PratikKapoor" },
-    { linkedin = "https://www.linkedin.com/in/kapoor-pratik/" },
-  ]
 
 title = "strictlyoptional"
 description = "Tech explorations, hardware tuning, and engineering deep-dives"
