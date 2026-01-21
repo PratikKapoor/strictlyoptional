@@ -192,20 +192,6 @@ Undervolting helps. My config pulls ~394W instead of ~434W, that's 40W less curr
 
 One more reason to tune your card: **longevity**. Less power, less heat, less stress on the weakest link in the system.
 
-## Your Card Is Waiting
-
-Here's what fascinates me: right now, in your PC, there's a chip with characteristics no one has fully mapped. Your specific GPU has a voltage/frequency curve that's never been perfectly optimized. It has thermal behaviors unique to its particular arrangement of imperfect transistors.
-
-When you undervolt and overclock, you're not following a guide, you're running experiments on a one-of-a-kind piece of physics. The "stable" settings you find are *yours*. No one else's card will behave exactly the same way.
-
-Some people have golden samples that hit 2900+ MHz at 950mV. Some have duds that crash at stock. Most of us are somewhere in between, with chips that have quirks waiting to be discovered.
-
-## The Miracle We Ignore
-
-We've gotten so used to GPUs that we forget what they are: billions of molecular-scale switches, built from refined sand, that simulate entire worlds in real-time. The fact that they work at all is absurd. The fact that they're all slightly different is inevitable.
-
-The silicon lottery isn't a flaw in manufacturing. It's a reminder that we're working at the edge of what's physically possible, where quantum mechanics meets engineering, and perfection is impossible.
-
 ---
 
 *This is part of a series documenting my RTX 4090 undervolt/overclock journey. The chip lottery gave me a ~45th percentile sample. Through testing, I found that 950mV @ 2730MHz with +1500MHz memory delivers better performance than stock while saving 40W. Your results will vary—that's the whole point.*
