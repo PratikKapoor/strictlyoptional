@@ -1,6 +1,7 @@
 # -- Site Configuration --
 theme = "blowfish"
 baseURL = "https://strictlyoptional.com/"
+title = "strictlyoptional"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true

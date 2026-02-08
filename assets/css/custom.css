@@ -36,7 +36,7 @@
   --text-accent: rgb(var(--color-secondary-600));
   --text-accent-hover: rgb(var(--color-secondary-500));
   --text-muted: rgb(var(--color-neutral-600));
-  --text-faint: rgb(var(--color-neutral-500));
+  --text-faint: rgb(var(--color-neutral-600));
   --text-heading: rgb(var(--color-neutral-900));
   --text-heading-light: rgb(var(--color-neutral-50));
   --text-strong: rgb(var(--color-neutral-800));
@@ -56,7 +56,7 @@
   --text-accent: rgb(var(--color-secondary-400));
   --text-accent-hover: rgb(var(--color-secondary-500));
   --text-muted: rgb(var(--color-neutral-400));
-  --text-faint: rgb(var(--color-neutral-500));
+  --text-faint: rgb(var(--color-neutral-400));
   --text-heading: rgb(var(--color-neutral-50));
   --text-strong: rgb(var(--color-neutral-200));
 }
