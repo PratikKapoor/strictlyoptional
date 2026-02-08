@@ -1,21 +1,17 @@
+# Only non-default overrides. Theme defaults: https://blowfish.page/docs/configuration/
 colorScheme = "blowfish"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
-disableTextInHeader = false
 highlightCurrentMenuArea = true
 
 [header]
   layout = "fixed-fill-blur"
 
 [footer]
-  showMenu = true
-  showCopyright = true
   showThemeAttribution = false
-  showAppearanceSwitcher = true
-  showScrollToTop = true
 
 [homepage]
   layout = "industrial"
@@ -27,14 +23,8 @@ highlightCurrentMenuArea = true
   cardViewScreenWidth = false
 
 [article]
-  showDate = true
   showDateUpdated = true
-  showAuthor = true
   showBreadcrumbs = true
-  showDraftLabel = true
-  showHeadingAnchors = true
-  showPagination = true
-  showReadingTime = true
   showTableOfContents = true
   showTaxonomies = true
   showWordCount = false
@@ -43,5 +33,4 @@ highlightCurrentMenuArea = true
 [list]
   showBreadcrumbs = true
   showSummary = true
-  groupByYear = true
   showCards = true

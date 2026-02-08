@@ -19,13 +19,15 @@
   pageRef = "about"
   weight = 40
 
-# -- Footer Menu --
+# -- Footer Menu (also used by homepage hero for social links) --
 [[footer]]
+  name = "GitHub"
   pre = "github"
   url = "https://github.com/PratikKapoor"
   weight = 10
 
 [[footer]]
+  name = "LinkedIn"
   pre = "linkedin"
   url = "https://www.linkedin.com/in/kapoor-pratik/"
   weight = 20

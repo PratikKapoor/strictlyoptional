@@ -1,7 +1,6 @@
 {{/* 
-  Industrial Homepage Layout for strictlyoptional.com
-  Archetype: Industrial / Utilitarian
-  Structure: Hero panel → Recent articles card grid
+  Industrial Homepage Layout
+  All content pulled from site config — no hardcoded strings.
 */}}
 
 {{/* ── Hero Section ── */}}
@@ -10,22 +9,19 @@
     <span class="status-dot"></span>&ensp;Systems Online
   </span>
 
-  <h1 class="hero-title">strictlyoptional</h1>
+  <h1 class="hero-title">{{ .Site.Title }}</h1>
 
   <p class="hero-tagline">
-    Tech explorations, hardware tuning, and engineering deep-dives. Going deeper than the spec sheet.
+    {{ .Site.Params.author.headline }} Going deeper than the spec sheet.
   </p>
 
   <div class="hero-meta">
-    <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(var(--color-neutral-500));">
-      Pratik Kapoor
-    </span>
-    <a href="https://github.com/PratikKapoor" target="_blank" rel="noopener noreferrer">
-      {{ partial "icon.html" "github" }}&ensp;GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/kapoor-pratik/" target="_blank" rel="noopener noreferrer">
-      {{ partial "icon.html" "linkedin" }}&ensp;LinkedIn
-    </a>
+    <span class="hero-author">{{ .Site.Params.author.name }}</span>
+    {{ range .Site.Menus.footer }}
+      <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+        {{ if .Pre }}{{ partial "icon.html" .Pre }}&ensp;{{ end }}{{ .Name | default .Title }}
+      </a>
+    {{ end }}
   </div>
 </section>
 

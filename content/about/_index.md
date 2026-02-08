@@ -4,8 +4,6 @@ description = 'About Pratik Kapoor and strictlyoptional.com'
 layout = 'simple'
 +++
 
-## About
-
 I'm **Pratik Kapoor** — a software engineer who likes to go deeper than the spec sheet.
 
 **strictlyoptional** is where I document the things I dig into: hardware tuning, engineering methodology, and the kind of technical exploration that starts with "I wonder how this actually works" and ends with a spreadsheet full of data.
@@ -21,10 +19,3 @@ I'm **Pratik Kapoor** — a software engineer who likes to go deeper than the sp
 ### The Name
 
 *Strictly optional* — because none of this is required reading. But if you're the kind of person who undervolts their GPU at 2am just to see if the silicon cooperates, you'll feel at home.
-
----
-
-### Connect
-
-- [GitHub](https://github.com/PratikKapoor) — source code and projects
-- [LinkedIn](https://www.linkedin.com/in/kapoor-pratik/) — professional network

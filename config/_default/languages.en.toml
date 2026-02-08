@@ -1,12 +1,12 @@
 [params]
   displayName = "EN"
   isoCode = "en"
-  weight = 1
   logo = "img/logo.png"
   copyright = "© { year } Pratik Kapoor"
 
 [params.author]
   name = "Pratik Kapoor"
+  # Also used as site meta description; intentionally the same string.
   headline = "Tech explorations, hardware tuning, and engineering deep-dives"
 
 title = "strictlyoptional"

@@ -1,0 +1,20 @@
+{{/* Project card shortcode. Params: title, status (active|complete|paused), tech (comma-separated), link */}}
+{{ $status := .Get "status" | default "active" }}
+<div class="project-card">
+  <div class="project-status">
+    <span class="status-indicator {{ $status }}"></span>
+    {{ if eq $status "complete" }}Complete{{ else if eq $status "paused" }}In Progress{{ else }}Active{{ end }}
+  </div>
+  <div class="project-title">{{ .Get "title" }}</div>
+  <div class="project-description">{{ .Inner | markdownify }}</div>
+  {{ with .Get "tech" }}
+    <div class="project-tech">
+      {{ range split . "," }}<span>{{ . | strings.TrimSpace }}</span>{{ end }}
+    </div>
+  {{ end }}
+  {{ with .Get "link" }}
+    <div class="project-links">
+      <a href="{{ . }}">View Source →</a>
+    </div>
+  {{ end }}
+</div>

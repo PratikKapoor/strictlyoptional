@@ -5,22 +5,19 @@ defaultContentLanguage = "en"
 
 enableRobotsTXT = true
 summaryLength = 30
-
-buildDrafts = false
-buildFuture = false
 enableEmoji = true
 
 [pagination]
   pagerSize = 10
 
+# Intentionally only tags + categories; theme also defines authors + series which we don't use.
 [taxonomies]
   tag = "tags"
   category = "categories"
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+# Required for raw HTML in markdown (project cards wrapper div).
+[markup.goldmark.renderer]
+  unsafe = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

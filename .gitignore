@@ -1,2 +1,8 @@
 public/
 .hugo_build.lock
+.DS_Store
+resources/_gen/
+*.swp
+.vscode/
+.idea/
+icon-circular.png
