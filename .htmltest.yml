@@ -1,0 +1,13 @@
+DirectoryPath: "public"
+CheckExternal: false
+CheckInternal: true
+CheckInternalHash: true
+CheckImages: true
+CheckScripts: true
+CheckDoctype: true
+EnforceHTTPS: true
+IgnoreURLs:
+  - "fonts.googleapis.com"
+  - "fonts.gstatic.com"
+IgnoreInternalEmptyHash: true
+IgnoreAltEmpty: true

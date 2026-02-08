@@ -2,8 +2,11 @@ name: Deploy Hugo
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
-  build-deploy:
+  build-test-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,9 +25,26 @@ jobs:
           key: hugo-resources-${{ hashFiles('assets/**') }}
           restore-keys: hugo-resources-
 
-      - run: hugo --minify
+      - name: Build
+        run: hugo --minify --printPathWarnings --printUnusedTemplates
 
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Install htmltest
+        run: curl https://htmltest.wjdp.uk | bash -s -- -b /usr/local/bin
+
+      - name: Validate HTML & links
+        run: htmltest -c .htmltest.yml
+
+      - name: Lighthouse CI
+        if: success()
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+      - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
