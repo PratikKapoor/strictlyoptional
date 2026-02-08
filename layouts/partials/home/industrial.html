@@ -1,0 +1,42 @@
+{{/* 
+  Industrial Homepage Layout for strictlyoptional.com
+  Archetype: Industrial / Utilitarian
+  Structure: Hero panel → Recent articles card grid
+*/}}
+
+{{/* ── Hero Section ── */}}
+<section class="hero-industrial">
+  <span class="hero-label">
+    <span class="status-dot"></span>&ensp;Systems Online
+  </span>
+
+  <h1 class="hero-title">strictlyoptional</h1>
+
+  <p class="hero-tagline">
+    Tech explorations, hardware tuning, and engineering deep-dives. Going deeper than the spec sheet.
+  </p>
+
+  <div class="hero-meta">
+    <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: rgb(var(--color-neutral-500));">
+      Pratik Kapoor
+    </span>
+    <a href="https://github.com/PratikKapoor" target="_blank" rel="noopener noreferrer">
+      {{ partial "icon.html" "github" }}&ensp;GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/kapoor-pratik/" target="_blank" rel="noopener noreferrer">
+      {{ partial "icon.html" "linkedin" }}&ensp;LinkedIn
+    </a>
+  </div>
+</section>
+
+{{/* ── Page Content (if any in _index.md) ── */}}
+{{ with .Content }}
+  <article class="max-w-full prose dark:prose-invert">
+    <section class="w-full">{{ . }}</section>
+  </article>
+{{ end }}
+
+{{/* ── Recent Articles ── */}}
+<section>
+  {{ partial "recent-articles/main.html" . }}
+</section>

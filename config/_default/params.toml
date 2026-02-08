@@ -4,11 +4,11 @@ autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
-disableTextInHeader = true
+disableTextInHeader = false
 highlightCurrentMenuArea = true
 
 [header]
-  layout = "basic"
+  layout = "fixed-fill-blur"
 
 [footer]
   showMenu = true
@@ -18,11 +18,13 @@ highlightCurrentMenuArea = true
   showScrollToTop = true
 
 [homepage]
-  layout = "page"
+  layout = "industrial"
   showRecent = true
-  showRecentItems = 5
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts/"
+  cardView = true
+  cardViewScreenWidth = false
 
 [article]
   showDate = true
@@ -43,6 +45,3 @@ highlightCurrentMenuArea = true
   showSummary = true
   groupByYear = true
   showCards = true
-
-[taxonomy]
-  showTermCount = true
